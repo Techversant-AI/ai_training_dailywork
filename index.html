@@ -219,6 +219,11 @@
     <button class="nav-tab" onclick="showSection('usecases')">Use Cases</button>
     <button class="nav-tab" onclick="showSection('prompts')">Prompts</button>
     <button class="nav-tab" onclick="showSection('demos')">Demos</button>
+    <button class="nav-tab" onclick="showSection('livejira')">Live Jira Demo</button>
+    <button class="nav-tab" onclick="showSection('tokenopt')">Token Optimization</button>
+    <button class="nav-tab" onclick="showSection('promptpatterns')">Prompt Patterns</button>
+    <button class="nav-tab" onclick="showSection('hallucination')">Hallucination Control</button>
+    <button class="nav-tab" onclick="showSection('structuredoutput')">Structured Output</button>
     <button class="nav-tab" onclick="showSection('compare')">Bad vs Good</button>
     <button class="nav-tab" onclick="showSection('workflow')">Workflow</button>
     <button class="nav-tab" onclick="showSection('tools')">Tools</button>
@@ -292,7 +297,794 @@
     <h2 class="section-title">Live <em>Demo Ideas</em> for 45-Min Session</h2>
   </div>
   <div id="demosContent"></div>
+
+    <h3 class="h3">🖥️ <span>Simple Live Demo Example</span></h3>
+
+    <div class="compare-row">
+      <div class="bad-block">
+        <span class="tag tag-bad">INPUT</span>
+        <div class="compare-text">
+          Generate Jira tasks for a customer analytics dashboard with login, KPI cards, charts, filters, and Excel export.
+        </div>
+      </div>
+
+      <div class="good-block">
+        <span class="tag tag-good">AI OUTPUT</span>
+        <div class="compare-text">
+          <strong>Epic:</strong> Customer Analytics Dashboard<br><br>
+
+          <strong>User Story:</strong><br>
+          As a retail manager,<br>
+          I want to view sales KPIs and charts,<br>
+          So that I can monitor store performance.<br><br>
+
+          <strong>Subtasks:</strong><br>
+          • Create login page<br>
+          • Build KPI cards UI<br>
+          • Implement sales charts<br>
+          • Add store filters<br>
+          • Add Excel export<br>
+          • Create mobile responsive layout<br><br>
+
+          <strong>Story Points:</strong> 13<br>
+          <strong>Priority:</strong> High
+        </div>
+      </div>
+    </div>
+
 </div>
+
+
+<!-- LIVE JIRA DEMO -->
+<div id="livejira" class="section">
+  <div class="section-header">
+    <span class="section-num">LIVE DEMO</span>
+    <h2 class="section-title">Live <em>JIRA Task AI Demo</em></h2>
+  </div>
+
+  <div class="demo-card">
+    <div class="demo-header">
+      <div class="demo-badge">LIVE</div>
+      <div class="demo-title">Requirement → JIRA Story Generator</div>
+    </div>
+
+    <p style="margin-bottom:18px;color:var(--muted);line-height:1.7;">
+      Click any button below during the live session. It opens ChatGPT or Claude with a ready-made enterprise JIRA task generation prompt.
+    </p>
+
+    <div style="display:flex;gap:14px;flex-wrap:wrap;margin-bottom:24px;">
+      <button class="btn-generate" onclick="openChatGPTPrompt()">Open in ChatGPT</button>
+      <button class="btn-generate" style="background:var(--accent2);color:#0a0a0f;" onclick="openClaudePrompt()">Open in Claude</button>
+    </div>
+
+    <div class="prompt-block">
+      <span class="prompt-label">LIVE DEMO INPUT</span>
+      Convert this requirement into complete JIRA-ready Agile tasks:
+
+      Requirement:
+      Build a customer analytics dashboard for retail store managers.
+
+      Features:
+      - Login authentication
+      - KPI cards
+      - Sales charts
+      - Store filters
+      - Export to Excel
+      - Mobile responsive UI
+
+      Generate:
+      - Epic
+      - User stories
+      - Subtasks
+      - Acceptance criteria
+      - Story points
+      - Risks
+      - QA test scenarios
+    </div>
+
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-icon">📋</div>
+        <div class="card-label">JIRA</div>
+        <div class="card-title">Epic Creation</div>
+        <div class="card-body">
+          AI generates structured epics with sprint-ready user stories.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🧪</div>
+        <div class="card-label">QA</div>
+        <div class="card-title">Test Cases</div>
+        <div class="card-body">
+          Automatic generation of positive, negative, and edge-case scenarios.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">⚡</div>
+        <div class="card-label">Delivery</div>
+        <div class="card-title">Sprint Planning</div>
+        <div class="card-body">
+          AI estimates story points and identifies dependencies and risks.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- TOKEN OPTIMIZATION -->
+<div id="tokenopt" class="section">
+  <div class="section-header">
+    <span class="section-num">COST ENGINEERING</span>
+    <h2 class="section-title">LLM Token Optimization & <em>Cost Control</em></h2>
+  </div>
+
+  <div class="demo-card">
+    <div class="demo-header">
+      <div class="demo-badge">NEW</div>
+      <div class="demo-title">Input Tokens, Output Tokens, Context Window & Enterprise AI Costing</div>
+    </div>
+
+    <p style="margin-bottom:20px;color:var(--muted);line-height:1.7;">
+      This tab explains how LLM cost is calculated and how teams can reduce cost while improving speed, quality, and scalability.
+    </p>
+
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-icon">📥</div>
+        <div class="card-label">Input Tokens</div>
+        <div class="card-title">What You Send to the Model</div>
+        <div class="card-body">
+          Includes system prompt, user question, chat history, RAG chunks, uploaded text, schemas, and examples.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">📤</div>
+        <div class="card-label">Output Tokens</div>
+        <div class="card-title">What the Model Generates</div>
+        <div class="card-body">
+          Includes answers, summaries, code, JSON, reports, explanations, and generated documents.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">💰</div>
+        <div class="card-label">Cost</div>
+        <div class="card-title">Token Usage = API Cost</div>
+        <div class="card-body">
+          More input and output tokens increase cost, latency, and infrastructure load.
+        </div>
+      </div>
+    </div>
+
+    <h3 class="h3">📌 <span>Token Cost Formula</span></h3>
+    <div class="prompt-block">
+      <span class="prompt-label">BASIC COST MODEL</span>
+      Total Cost = Input Token Cost + Output Token Cost
+
+      Input Token Cost = input_tokens × model_input_price
+      Output Token Cost = output_tokens × model_output_price
+
+      Important: Output tokens are often more expensive than input tokens.
+    </div>
+
+    
+    <h3 class="h3">💼 <span>Costing Factors to Compare Across LLMs</span></h3>
+    <table class="ai-table">
+      <thead>
+        <tr>
+          <th>Factor</th>
+          <th>Why It Matters</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Input token price</td>
+          <td>Cost of prompt, system instructions, RAG chunks, chat history.</td>
+        </tr>
+        <tr>
+          <td>Output token price</td>
+          <td>Cost of generated answer; often more expensive than input.</td>
+        </tr>
+        <tr>
+          <td>Context window</td>
+          <td>How much text, document content, code, schema, or chat history can be sent at once.</td>
+        </tr>
+        <tr>
+          <td>Max output tokens</td>
+          <td>Maximum answer size the model can generate in one response.</td>
+        </tr>
+        <tr>
+          <td>Prompt caching</td>
+          <td>Reduces cost for repeated system prompts or repeated context.</td>
+        </tr>
+        <tr>
+          <td>Batch processing</td>
+          <td>Cheaper for non-real-time jobs such as nightly summaries, report generation, and document processing.</td>
+        </tr>
+        <tr>
+          <td>Latency</td>
+          <td>Important for chatbots, live applications, customer support, and real-time copilots.</td>
+        </tr>
+        <tr>
+          <td>Tool calling / function calling</td>
+          <td>Needed for agents, API workflows, database tools, automation, and multi-step task execution.</td>
+        </tr>
+        <tr>
+          <td>Multimodal support</td>
+          <td>Text, image, audio, PDF, video, screenshots, and document understanding capabilities.</td>
+        </tr>
+        <tr>
+          <td>Data privacy / enterprise controls</td>
+          <td>Important for company data, client data, production code, compliance, and access control.</td>
+        </tr>
+        <tr>
+          <td>Model routing</td>
+          <td>Use cheaper models for simple tasks and powerful models for complex reasoning, architecture, or code analysis.</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+<h3 class="h3">🧠 <span>What Consumes Input Tokens?</span></h3>
+    <table class="ai-table">
+      <thead>
+        <tr>
+          <th>Component</th>
+          <th>Example</th>
+          <th>Optimization</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>System Prompt</td>
+          <td>Long role instructions and rules</td>
+          <td>Compress prompt, remove repeated instructions</td>
+        </tr>
+        <tr>
+          <td>Chat History</td>
+          <td>Previous 50 conversation turns</td>
+          <td>Use summarized memory instead of full history</td>
+        </tr>
+        <tr>
+          <td>RAG Context</td>
+          <td>10 retrieved chunks from documents</td>
+          <td>Use top 3–5 relevant chunks only</td>
+        </tr>
+        <tr>
+          <td>Database Schema</td>
+          <td>Full schema with 100 tables</td>
+          <td>Send only relevant tables and columns</td>
+        </tr>
+        <tr>
+          <td>Examples</td>
+          <td>Many few-shot examples</td>
+          <td>Keep only high-value examples</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 class="h3">⚠️ <span>Common Token Waste Problems</span></h3>
+    <div class="grid-2">
+      <div class="bad-block">
+        <span class="tag tag-bad">❌ COSTLY</span>
+        <div class="compare-text">
+          Sending full PDFs, full chat history, full database schema, and long system prompts for every request.
+        </div>
+        <div class="compare-reason">
+          Impact: high cost, slow response, model confusion, poor scalability.
+        </div>
+      </div>
+
+      <div class="good-block">
+        <span class="tag tag-good">✅ OPTIMIZED</span>
+        <div class="compare-text">
+          Send compressed prompt + summarized memory + top relevant RAG chunks + constrained output format.
+        </div>
+        <div class="compare-reason">
+          Impact: lower cost, faster response, better focus, easier enterprise scaling.
+        </div>
+      </div>
+    </div>
+
+    <h3 class="h3">⚡ <span>Optimization Techniques</span></h3>
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-icon">✂️</div>
+        <div class="card-label">Prompt Compression</div>
+        <div class="card-title">Shorter System Prompts</div>
+        <div class="card-body">
+          Remove repeated rules, long explanations, and unnecessary examples from every request.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🔍</div>
+        <div class="card-label">RAG Filtering</div>
+        <div class="card-title">Retrieve Only Relevant Chunks</div>
+        <div class="card-body">
+          Use metadata filters, top-k tuning, and reranking to avoid sending irrelevant context.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🧾</div>
+        <div class="card-label">Structured Output</div>
+        <div class="card-title">Control Response Size</div>
+        <div class="card-body">
+          Ask for JSON, tables, or 5 bullets instead of open-ended long explanations.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🧠</div>
+        <div class="card-label">Memory Summary</div>
+        <div class="card-title">Summarize Conversation State</div>
+        <div class="card-body">
+          Replace long chat history with compact user intent, decisions, and pending context.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🗄️</div>
+        <div class="card-label">Caching</div>
+        <div class="card-title">Avoid Repeated LLM Calls</div>
+        <div class="card-body">
+          Cache static answers, embeddings, summaries, and repeated prompt results using Redis.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🎯</div>
+        <div class="card-label">Model Routing</div>
+        <div class="card-title">Use Right Model for Right Task</div>
+        <div class="card-body">
+          Small model for classification, larger model for reasoning, architecture, or complex code.
+        </div>
+      </div>
+    </div>
+
+    <h3 class="h3">📊 <span>Enterprise Monitoring KPIs</span></h3>
+    <table class="ai-table">
+      <thead>
+        <tr>
+          <th>KPI</th>
+          <th>Why It Matters</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Avg Input Tokens</td>
+          <td>Detect prompt/context bloat</td>
+          <td>Compress prompt and reduce retrieved chunks</td>
+        </tr>
+        <tr>
+          <td>Avg Output Tokens</td>
+          <td>Control response verbosity</td>
+          <td>Add output length limits and structured format</td>
+        </tr>
+        <tr>
+          <td>Cost per Request</td>
+          <td>Understand unit economics</td>
+          <td>Set budget alerts and quotas</td>
+        </tr>
+        <tr>
+          <td>Cost per User / Team</td>
+          <td>Identify expensive workflows</td>
+          <td>Apply model routing and caching</td>
+        </tr>
+        <tr>
+          <td>Token Spikes</td>
+          <td>Detect abuse or accidental full-document sends</td>
+          <td>Add max token caps and input validation</td>
+        </tr>
+        <tr>
+          <td>Cache Hit Ratio</td>
+          <td>Measure saved LLM calls</td>
+          <td>Improve semantic cache and TTL strategy</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 class="h3">🎬 <span>Live Demo Flow</span></h3>
+    <div class="workflow">
+      <div class="wf-step">
+        <div class="wf-label">Before</div>
+        <div class="wf-title">Huge Prompt</div>
+        <div class="wf-desc">Full history + full schema + full docs</div>
+      </div>
+      <div class="wf-step">
+        <div class="wf-label">AI Analysis</div>
+        <div class="wf-title">Token Audit</div>
+        <div class="wf-desc">Find wasteful input/output tokens</div>
+      </div>
+      <div class="wf-step">
+        <div class="wf-label">After</div>
+        <div class="wf-title">Optimized Prompt</div>
+        <div class="wf-desc">Compressed prompt + top-k context</div>
+      </div>
+      <div class="wf-step">
+        <div class="wf-label">Result</div>
+        <div class="wf-title">Lower Cost</div>
+        <div class="wf-desc">Faster response and cheaper scaling</div>
+      </div>
+    </div>
+
+    <div class="prompt-block">
+      <span class="prompt-label">LIVE DEMO PROMPT</span>
+      Act as an LLM cost optimization expert.
+
+      Analyze this AI application prompt flow and identify token waste:
+      - System prompt: 2500 tokens
+      - Chat history: 6000 tokens
+      - RAG context: 8000 tokens
+      - User query: 100 tokens
+      - Output response: 1500 tokens
+
+      Provide:
+      1. Total tokens per request
+      2. Main cost drivers
+      3. Optimization plan
+      4. Before vs after token estimate
+      5. Enterprise monitoring KPIs
+    </div>
+
+    <h3 class="h3">✅ <span>Closing Message</span></h3>
+    <div class="closing">
+      <div class="closing-title">
+        Prompt Engineering is also <span class="highlight">Cost Engineering</span>
+      </div>
+      <div class="closing-body">
+        In enterprise AI systems, better prompts do not only improve answer quality.
+        They reduce token usage, control API cost, improve latency, and make AI applications scalable.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- PROMPT PATTERNS -->
+<div id="promptpatterns" class="section">
+  <div class="section-header">
+    <span class="section-num">PROMPT ENGINEERING</span>
+    <h2 class="section-title">Reusable <em>Prompt Design Patterns</em></h2>
+  </div>
+
+  <div class="demo-card">
+    <div class="demo-header">
+      <div class="demo-badge">PATTERNS</div>
+      <div class="demo-title">Prompt Structures Employees Can Use Daily</div>
+    </div>
+
+    <p style="margin-bottom:20px;color:var(--muted);line-height:1.7;">
+      Prompt patterns are reusable structures that help employees get consistent, high-quality AI output.
+    </p>
+
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-icon">🎭</div>
+        <div class="card-label">Role Prompting</div>
+        <div class="card-title">Assign Expert Role</div>
+        <div class="card-body">Ask AI to act as a senior developer, QA lead, architect, HR recruiter, or delivery manager.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🧩</div>
+        <div class="card-label">Context Prompting</div>
+        <div class="card-title">Give Project Background</div>
+        <div class="card-body">Mention tech stack, business domain, constraints, environment, and expected users.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">📐</div>
+        <div class="card-label">Format Prompting</div>
+        <div class="card-title">Control the Output</div>
+        <div class="card-body">Request output as table, JSON, checklist, Jira story, RCA report, or code block.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🧪</div>
+        <div class="card-label">Few-Shot Prompting</div>
+        <div class="card-title">Show Examples</div>
+        <div class="card-body">Provide 1–3 examples of input and expected output so AI follows your pattern.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🔒</div>
+        <div class="card-label">Constraint Prompting</div>
+        <div class="card-title">Set Boundaries</div>
+        <div class="card-body">Specify limits: max words, no assumptions, no confidential data, cite gaps clearly.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">✅</div>
+        <div class="card-label">Review Prompting</div>
+        <div class="card-title">Ask AI to Validate</div>
+        <div class="card-body">Ask AI to check its own answer for missing risks, edge cases, and contradictions.</div>
+      </div>
+    </div>
+
+    <h3 class="h3">📌 <span>Master Prompt Pattern</span></h3>
+    <div class="prompt-block">
+      <span class="prompt-label">ROLE + TASK + CONTEXT + FORMAT + CONSTRAINTS</span>
+      Act as a [ROLE].
+
+      Task:
+      [Clearly describe what you want]
+
+      Context:
+      [Project, stack, users, business domain, environment]
+
+      Output Format:
+      [Table / JSON / Jira story / code / checklist]
+
+      Constraints:
+      [Security limits, word limit, assumptions, validation rules]
+    </div>
+
+    <h3 class="h3">⚖️ <span>Bad Prompt vs Pattern-Based Prompt</span></h3>
+    <div class="compare-row">
+      <div class="bad-block">
+        <span class="tag tag-bad">❌ BAD</span>
+        <div class="compare-text">Fix this code and make it better.</div>
+        <div class="compare-reason">No role, no goal, no stack, no output format.</div>
+      </div>
+
+      <div class="good-block">
+        <span class="tag tag-good">✅ GOOD</span>
+        <div class="compare-text">
+          Act as a senior Node.js backend engineer. Review this Express API for security, performance, validation, and error handling. Return findings in a table with severity, issue, fix, and corrected code.
+        </div>
+        <div class="compare-reason">Role + task + quality criteria + output format.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- HALLUCINATION CONTROL -->
+<div id="hallucination" class="section">
+  <div class="section-header">
+    <span class="section-num">QUALITY CONTROL</span>
+    <h2 class="section-title">AI Hallucination <em>Prevention</em></h2>
+  </div>
+
+  <div class="demo-card">
+    <div class="demo-header">
+      <div class="demo-badge">CRITICAL</div>
+      <div class="demo-title">How to Reduce Wrong, Fake, or Overconfident AI Answers</div>
+    </div>
+
+    <p style="margin-bottom:20px;color:var(--muted);line-height:1.7;">
+      Hallucination happens when AI gives confident answers that are incorrect, invented, outdated, or unsupported.
+    </p>
+
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-icon">📚</div>
+        <div class="card-label">Grounding</div>
+        <div class="card-title">Use Source Context</div>
+        <div class="card-body">Give AI verified documents, schemas, logs, or retrieved RAG chunks instead of asking from memory.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">❓</div>
+        <div class="card-label">Uncertainty</div>
+        <div class="card-title">Force AI to Say “Not Sure”</div>
+        <div class="card-body">Ask AI to clearly state assumptions, missing information, and confidence level.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🔍</div>
+        <div class="card-label">Verification</div>
+        <div class="card-title">Ask for Validation Steps</div>
+        <div class="card-body">For code, SQL, cloud, and security: ask how to verify the answer before production use.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🧾</div>
+        <div class="card-label">Schema Control</div>
+        <div class="card-title">Provide Exact Schema</div>
+        <div class="card-body">For SQL/API work, provide exact table columns or API contract so AI does not invent fields.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🚫</div>
+        <div class="card-label">No Guessing</div>
+        <div class="card-title">Block Unsupported Claims</div>
+        <div class="card-body">Tell AI: “Do not invent facts. If data is missing, list what is missing.”</div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">✅</div>
+        <div class="card-label">Cross Check</div>
+        <div class="card-title">Use Review Prompt</div>
+        <div class="card-body">Ask AI to review its own answer and identify possible inaccuracies or weak assumptions.</div>
+      </div>
+    </div>
+
+    <h3 class="h3">🛡️ <span>Hallucination-Safe Prompt</span></h3>
+    <div class="prompt-block">
+      <span class="prompt-label">ENTERPRISE SAFE PROMPT</span>
+      Act as a careful technical reviewer.
+
+      Use only the information provided below.
+      Do not invent API names, table columns, library functions, prices, dates, or policies.
+      If something is missing, write “Information not provided.”
+
+      For every recommendation, include:
+      - Evidence from the given context
+      - Assumption, if any
+      - Verification step before production use
+
+      Context:
+      [paste logs / schema / requirement / document here]
+    </div>
+
+    <h3 class="h3">🎬 <span>Live Demo Idea</span></h3>
+    <div class="workflow">
+      <div class="wf-step">
+        <div class="wf-label">Step 1</div>
+        <div class="wf-title">Ask Vague Question</div>
+        <div class="wf-desc">AI may invent details</div>
+      </div>
+      <div class="wf-step">
+        <div class="wf-label">Step 2</div>
+        <div class="wf-title">Add Source Context</div>
+        <div class="wf-desc">Provide schema/logs/docs</div>
+      </div>
+      <div class="wf-step">
+        <div class="wf-label">Step 3</div>
+        <div class="wf-title">Add No-Guess Rule</div>
+        <div class="wf-desc">Force uncertainty handling</div>
+      </div>
+      <div class="wf-step">
+        <div class="wf-label">Result</div>
+        <div class="wf-title">More Reliable Answer</div>
+        <div class="wf-desc">Safer for enterprise use</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- STRUCTURED OUTPUT -->
+<div id="structuredoutput" class="section">
+  <div class="section-header">
+    <span class="section-num">AUTOMATION READY</span>
+    <h2 class="section-title">JSON & <em>Structured Output Prompting</em></h2>
+  </div>
+
+  <div class="demo-card">
+    <div class="demo-header">
+      <div class="demo-badge">API READY</div>
+      <div class="demo-title">Make AI Output Easy to Parse, Validate, and Automate</div>
+    </div>
+
+    <p style="margin-bottom:20px;color:var(--muted);line-height:1.7;">
+      Structured output is essential when AI responses are used inside APIs, workflows, Jira automation, dashboards, or agents.
+    </p>
+
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-icon">🧱</div>
+        <div class="card-label">JSON</div>
+        <div class="card-title">Machine-Readable Output</div>
+        <div class="card-body">Use JSON when AI output will be consumed by backend APIs, UI components, or automation scripts.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">📊</div>
+        <div class="card-label">Tables</div>
+        <div class="card-title">Human Review Format</div>
+        <div class="card-body">Use tables for test cases, risk registers, Jira subtasks, comparisons, and status reports.</div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">✅</div>
+        <div class="card-label">Validation</div>
+        <div class="card-title">Reduce Output Errors</div>
+        <div class="card-body">Specify required keys, allowed values, null handling, and no extra text outside JSON.</div>
+      </div>
+    </div>
+
+    <h3 class="h3">❌ <span>Unstructured Output</span></h3>
+    <div class="bad-block">
+      <span class="tag tag-bad">BAD</span>
+      <div class="compare-text">
+        Explain the bug and suggest a fix.
+      </div>
+      <div class="compare-reason">
+        Output may be long, inconsistent, hard to parse, and difficult to automate.
+      </div>
+    </div>
+
+    <h3 class="h3">✅ <span>Structured Output Prompt</span></h3>
+    <div class="prompt-block">
+      <span class="prompt-label">JSON OUTPUT PROMPT</span>
+      Analyze the following bug report.
+
+      Return ONLY valid JSON in this exact schema:
+
+      {
+        "summary": "",
+        "severity": "low | medium | high | critical",
+        "root_cause": "",
+        "affected_module": "",
+        "recommended_fix": "",
+        "test_cases": [
+          {
+            "id": "",
+            "scenario": "",
+            "expected_result": ""
+          }
+        ],
+        "production_risk": "",
+        "needs_human_review": true
+      }
+
+      Bug Report:
+      [paste issue here]
+    </div>
+
+    <h3 class="h3">📌 <span>Structured Output Use Cases</span></h3>
+    <table class="ai-table">
+      <thead>
+        <tr>
+          <th>Team</th>
+          <th>Structured Output Example</th>
+          <th>Best Format</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Developers</td>
+          <td>Bug RCA with severity and corrected code</td>
+          <td>JSON + code block</td>
+        </tr>
+        <tr>
+          <td>QA</td>
+          <td>Test cases with priority and expected result</td>
+          <td>Table</td>
+        </tr>
+        <tr>
+          <td>Project Managers</td>
+          <td>Jira stories, subtasks, risks</td>
+          <td>Markdown table</td>
+        </tr>
+        <tr>
+          <td>DevOps</td>
+          <td>Incident RCA and runbook steps</td>
+          <td>JSON / checklist</td>
+        </tr>
+        <tr>
+          <td>HR</td>
+          <td>Candidate screening summary</td>
+          <td>Scoring table</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 class="h3">🎬 <span>Live Demo Prompt</span></h3>
+    <div class="prompt-block">
+      <span class="prompt-label">JIRA STRUCTURED OUTPUT DEMO</span>
+      Convert this requirement into Jira-ready output.
+
+      Return as a markdown table with columns:
+      Type | Title | Description | Acceptance Criteria | Story Points | Priority
+
+      Requirement:
+      Build a customer analytics dashboard with login, KPI cards, sales charts, filters, Excel export, and mobile responsive UI.
+    </div>
+  </div>
+</div>
+
 
 <!-- BAD VS GOOD -->
 <div id="compare" class="section">
@@ -1399,6 +2191,46 @@ function copyPrompt(btn) {
     setTimeout(() => btn.textContent = 'Copy', 2000);
   });
 }
+
+const jiraPrompt = `Act as a senior Agile delivery manager and technical architect.
+
+Convert the following software requirement into complete JIRA-ready Agile tasks.
+
+Requirement:
+Build a customer analytics dashboard for retail store managers.
+
+Features:
+- Login authentication
+- KPI cards
+- Sales charts
+- Store filters
+- Export to Excel
+- Mobile responsive UI
+
+Generate:
+1. Epic
+2. User stories
+3. Subtasks
+4. Acceptance criteria
+5. Story points
+6. Technical risks
+7. QA test scenarios
+8. Sprint recommendations
+
+Format output professionally for enterprise JIRA usage.`;
+
+function openChatGPTPrompt() {
+  navigator.clipboard.writeText(jiraPrompt);
+  window.open('https://chatgpt.com', '_blank');
+  alert('Prompt copied! Paste into ChatGPT.');
+}
+
+function openClaudePrompt() {
+  navigator.clipboard.writeText(jiraPrompt);
+  window.open('https://claude.ai', '_blank');
+  alert('Prompt copied! Paste into Claude.');
+}
+
 </script>
 </body>
 </html>
