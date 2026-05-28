@@ -214,23 +214,25 @@
 <nav>
   <div class="nav-brand">⚡ AI Practical Session</div>
   <div id="navRole" class="nav-role">Select Role →</div>
+  
   <div class="nav-tabs" id="navTabs">
     <button class="nav-tab active" onclick="showSection('home')">Home</button>
+    <button class="nav-tab" onclick="showSection('promptbasics')">Prompt Basics</button>
+    <button class="nav-tab" onclick="showSection('promptpatterns')">Prompt Patterns</button>
     <button class="nav-tab" onclick="showSection('usecases')">Use Cases</button>
     <button class="nav-tab" onclick="showSection('prompts')">Prompts</button>
     <button class="nav-tab" onclick="showSection('demos')">Demos</button>
-    <button class="nav-tab" onclick="showSection('livejira')">Live Jira Demo</button>
-    <button class="nav-tab" onclick="showSection('tokenopt')">Token Optimization</button>
-    <button class="nav-tab" onclick="showSection('promptpatterns')">Prompt Patterns</button>
-    <button class="nav-tab" onclick="showSection('hallucination')">Hallucination Control</button>
+    <button class="nav-tab" onclick="showSection('livejira')">Live Demo</button>
     <button class="nav-tab" onclick="showSection('structuredoutput')">Structured Output</button>
+    <button class="nav-tab" onclick="showSection('hallucination')">Hallucination Control</button>
+    <button class="nav-tab" onclick="showSection('tokenopt')">Token Optimization</button>
     <button class="nav-tab" onclick="showSection('compare')">Bad vs Good</button>
-    <button class="nav-tab" onclick="showSection('workflow')">Workflow</button>
     <button class="nav-tab" onclick="showSection('tools')">Tools</button>
     <button class="nav-tab" onclick="showSection('risks')">Risks</button>
     <button class="nav-tab" onclick="showSection('cheatsheet')">Cheat Sheet</button>
     <button class="nav-tab" onclick="showSection('closing')">Closing</button>
   </div>
+
 </nav>
 
 <div class="main">
@@ -274,7 +276,7 @@
 <!-- USE CASES -->
 <div id="usecases" class="section">
   <div class="section-header">
-    <span class="section-num">SECTION 01</span>
+    <span class="section-num">SECTION 04</span>
     <h2 class="section-title">Role-Specific <em>Daily AI Use Cases</em></h2>
   </div>
   <div id="roleDisplay" class="role-display"></div>
@@ -284,130 +286,114 @@
 <!-- PROMPTS -->
 <div id="prompts" class="section">
   <div class="section-header">
-    <span class="section-num">SECTION 02</span>
+    <span class="section-num">SECTION 05</span>
     <h2 class="section-title">Top 10 <em>Practical AI Prompts</em></h2>
   </div>
   <div id="promptsContent"></div>
 </div>
 
+
+
 <!-- DEMOS -->
 <div id="demos" class="section">
   <div class="section-header">
-    <span class="section-num">SECTION 03</span>
-    <h2 class="section-title">Live <em>Demo Ideas</em> for 45-Min Session</h2>
-  </div>
-  <div id="demosContent"></div>
-
-    <h3 class="h3">🖥️ <span>Simple Live Demo Example</span></h3>
-
-    <div class="compare-row">
-      <div class="bad-block">
-        <span class="tag tag-bad">INPUT</span>
-        <div class="compare-text">
-          Generate Jira tasks for a customer analytics dashboard with login, KPI cards, charts, filters, and Excel export.
-        </div>
-      </div>
-
-      <div class="good-block">
-        <span class="tag tag-good">AI OUTPUT</span>
-        <div class="compare-text">
-          <strong>Epic:</strong> Customer Analytics Dashboard<br><br>
-
-          <strong>User Story:</strong><br>
-          As a retail manager,<br>
-          I want to view sales KPIs and charts,<br>
-          So that I can monitor store performance.<br><br>
-
-          <strong>Subtasks:</strong><br>
-          • Create login page<br>
-          • Build KPI cards UI<br>
-          • Implement sales charts<br>
-          • Add store filters<br>
-          • Add Excel export<br>
-          • Create mobile responsive layout<br><br>
-
-          <strong>Story Points:</strong> 13<br>
-          <strong>Priority:</strong> High
-        </div>
-      </div>
-    </div>
-
-</div>
-
-
-<!-- LIVE JIRA DEMO -->
-<div id="livejira" class="section">
-  <div class="section-header">
-    <span class="section-num">LIVE DEMO</span>
-    <h2 class="section-title">Live <em>JIRA Task AI Demo</em></h2>
+    <span class="section-num">SECTION 06</span>
+    <h2 class="section-title">Live <em>Demo Using First Prompt</em></h2>
   </div>
 
   <div class="demo-card">
     <div class="demo-header">
       <div class="demo-badge">LIVE</div>
-      <div class="demo-title">Requirement → JIRA Story Generator</div>
+      <div class="demo-title">Use the First Prompt from the Prompts Tab</div>
+    </div>
+
+    <p style="margin-bottom:20px;color:var(--muted);line-height:1.7;">
+      This demo uses the first prompt from the selected role's Prompts tab. Select a role on the Home page, then use Prompt 1 below as the live demonstration.
+    </p>
+
+    <h3 class="h3">🎯 <span>First Prompt for Selected Role</span></h3>
+    <div class="prompt-block" style="min-height:140px;">
+      <span class="prompt-label" id="demoPromptLabel">PROMPT 1 DEMO</span>
+      <button class="copy-btn" onclick="copyStaticText('demoFirstPromptDynamic')">Copy</button>
+      <div id="demoFirstPromptDynamic" style="color:var(--muted);font-style:italic;">Generate a session from the Home tab to load Prompt 1 here.</div>
+    </div>
+
+    <h3 class="h3">🎬 <span>How to Present This Live</span></h3>
+    <div class="workflow">
+      <div class="wf-step">
+        <div class="wf-label">Step 1</div>
+        <div class="wf-title">Select Role</div>
+        <div class="wf-desc">Choose your team role on the Home page</div>
+      </div>
+      <div class="wf-step">
+        <div class="wf-label">Step 2</div>
+        <div class="wf-title">View Prompt 1</div>
+        <div class="wf-desc">It appears above, loaded automatically</div>
+      </div>
+      <div class="wf-step">
+        <div class="wf-label">Step 3</div>
+        <div class="wf-title">Paste in ChatGPT / Claude</div>
+        <div class="wf-desc">Copy and generate a live answer</div>
+      </div>
+      <div class="wf-step">
+        <div class="wf-label">Step 4</div>
+        <div class="wf-title">Explain Output</div>
+        <div class="wf-desc">Show how prompt quality affects the result</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- LIVE DEMO -->
+
+<div id="livejira" class="section">
+  <div class="section-header">
+    <span class="section-num">SECTION 07</span>
+    <h2 class="section-title">Live <em>AI Prompt Demo</em></h2>
+  </div>
+
+  <div class="demo-card">
+    <div class="demo-header">
+      <div class="demo-badge">LIVE</div>
+      <div class="demo-title" id="liveDemoTitle">Live AI Demo — Select a Role First</div>
     </div>
 
     <p style="margin-bottom:18px;color:var(--muted);line-height:1.7;">
-      Click any button below during the live session. It opens ChatGPT or Claude with a ready-made enterprise JIRA task generation prompt.
+      Select your role on the Home page, then use the buttons below to paste the first prompt directly into ChatGPT or Claude for a live demonstration.
     </p>
 
     <div style="display:flex;gap:14px;flex-wrap:wrap;margin-bottom:24px;">
-      <button class="btn-generate" onclick="openChatGPTPrompt()">Open in ChatGPT</button>
-      <button class="btn-generate" style="background:var(--accent2);color:#0a0a0f;" onclick="openClaudePrompt()">Open in Claude</button>
+      <button class="btn-generate" onclick="openChatGPTLivePrompt()">▶ Open in ChatGPT</button>
+      <button class="btn-generate" style="background:var(--accent2);color:#0a0a0f;" onclick="openClaudeLivePrompt()">▶ Open in Claude</button>
     </div>
 
-    <div class="prompt-block">
-      <span class="prompt-label">LIVE DEMO INPUT</span>
-      Convert this requirement into complete JIRA-ready Agile tasks:
-
-      Requirement:
-      Build a customer analytics dashboard for retail store managers.
-
-      Features:
-      - Login authentication
-      - KPI cards
-      - Sales charts
-      - Store filters
-      - Export to Excel
-      - Mobile responsive UI
-
-      Generate:
-      - Epic
-      - User stories
-      - Subtasks
-      - Acceptance criteria
-      - Story points
-      - Risks
-      - QA test scenarios
+    <h3 class="h3">🎯 <span>Live Demo Prompt</span></h3>
+    <div class="prompt-block" style="min-height:120px;">
+      <span class="prompt-label">PROMPT 1 — LIVE SESSION</span>
+      <button class="copy-btn" onclick="copyLiveDemoPrompt(this)">Copy</button>
+      <div id="liveDemoPromptText" style="color:var(--muted);font-style:italic;">Generate a session from the Home tab to load the first prompt here.</div>
     </div>
 
-    <div class="grid-3">
+    <div class="grid-3" style="margin-top:24px;">
+      <div class="card">
+        <div class="card-icon">🎯</div>
+        <div class="card-label">Step 1</div>
+        <div class="card-title">Select Your Role</div>
+        <div class="card-body">Choose your team role on the Home page and click Generate Session.</div>
+      </div>
       <div class="card">
         <div class="card-icon">📋</div>
-        <div class="card-label">JIRA</div>
-        <div class="card-title">Epic Creation</div>
-        <div class="card-body">
-          AI generates structured epics with sprint-ready user stories.
-        </div>
+        <div class="card-label">Step 2</div>
+        <div class="card-title">Load the Prompt</div>
+        <div class="card-body">The first prompt for your role appears here automatically, ready to copy.</div>
       </div>
-
-      <div class="card">
-        <div class="card-icon">🧪</div>
-        <div class="card-label">QA</div>
-        <div class="card-title">Test Cases</div>
-        <div class="card-body">
-          Automatic generation of positive, negative, and edge-case scenarios.
-        </div>
-      </div>
-
       <div class="card">
         <div class="card-icon">⚡</div>
-        <div class="card-label">Delivery</div>
-        <div class="card-title">Sprint Planning</div>
-        <div class="card-body">
-          AI estimates story points and identifies dependencies and risks.
-        </div>
+        <div class="card-label">Step 3</div>
+        <div class="card-title">Run Live</div>
+        <div class="card-body">Paste into ChatGPT or Claude during the session and discuss the AI output.</div>
       </div>
     </div>
   </div>
@@ -415,10 +401,199 @@
 
 
 
+
+<!-- PROMPT BASICS -->
+<div id="promptbasics" class="section">
+  <div class="section-header">
+    <span class="section-num">SECTION 01</span>
+    <h2 class="section-title">Basics of <em>Prompt Engineering</em></h2>
+  </div>
+
+  <div class="demo-card">
+    <div class="demo-header">
+      <div class="demo-badge">FOUNDATION</div>
+      <div class="demo-title">Understanding Prompts & Prompt Engineering</div>
+    </div>
+
+    <p style="margin-bottom:20px;color:var(--muted);line-height:1.7;">
+      Prompt engineering is the process of designing clear and structured instructions for AI systems to generate accurate and useful results.
+    </p>
+
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-icon">📝</div>
+        <div class="card-label">Prompt</div>
+        <div class="card-title">Instruction to AI</div>
+        <div class="card-body">
+          A prompt tells the AI what task to perform and how to respond.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🎯</div>
+        <div class="card-label">Goal</div>
+        <div class="card-title">Clear Requirement</div>
+        <div class="card-body">
+          Better prompts lead to better accuracy, consistency, and automation.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">⚡</div>
+        <div class="card-label">Business Impact</div>
+        <div class="card-title">Enterprise Productivity</div>
+        <div class="card-body">
+          Prompt engineering improves developer productivity and reduces AI cost.
+        </div>
+      </div>
+    </div>
+
+    <h3 class="h3">📌 <span>Components of a Good Prompt</span></h3>
+
+    <table class="ai-table">
+      <thead>
+        <tr>
+          <th>Component</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Role</td>
+          <td>Tell AI who it should act as</td>
+        </tr>
+        <tr>
+          <td>Task</td>
+          <td>Clearly explain the work to be done</td>
+        </tr>
+        <tr>
+          <td>Context</td>
+          <td>Provide project details and requirements</td>
+        </tr>
+        <tr>
+          <td>Format</td>
+          <td>Specify output style such as JSON or table</td>
+        </tr>
+        <tr>
+          <td>Constraints</td>
+          <td>Add rules like no assumptions or max word count</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 class="h3">🔬 <span>Prompt Anatomy — Technical Breakdown</span></h3>
+    <div class="prompt-block">
+      <span class="prompt-label">ANATOMY OF A PRODUCTION-GRADE PROMPT</span>
+<strong style="color:var(--accent);">[ROLE]</strong>     Act as a senior FastAPI developer and security architect.
+
+<strong style="color:var(--accent2);">[CONTEXT]</strong>   I am building a customer login API for a retail CRM serving 14 stores.
+           Stack: Python 3.11, FastAPI, PostgreSQL, Redis, JWT (RS256).
+
+<strong style="color:var(--accent);">[TASK]</strong>      Create a secure login endpoint with: JWT RS256 authentication,
+           bcrypt password verification, Redis session management,
+           account lockout after 5 failed attempts, and structured error responses.
+
+<strong style="color:var(--accent2);">[FORMAT]</strong>    Output: (1) FastAPI route code, (2) Pydantic request/response models,
+           (3) Redis session key schema, (4) error response structure.
+
+<strong style="color:var(--accent);">[CONSTRAINTS]</strong> No hardcoded secrets. No synchronous DB calls in async endpoints.
+           Parameterised queries only. Include docstrings. Python type hints throughout.
+    </div>
+
+    <h3 class="h3">⚙️ <span>How LLMs Process Your Prompt</span></h3>
+    <table class="ai-table">
+      <thead>
+        <tr><th>Stage</th><th>What Happens</th><th>Why It Matters for You</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Tokenisation</td>
+          <td>Your text is split into tokens (~4 characters each). "FastAPI" = 2 tokens.</td>
+          <td>Longer prompts cost more. Every word is measured.</td>
+        </tr>
+        <tr>
+          <td>Attention</td>
+          <td>The model weights relationships between every token in your prompt simultaneously.</td>
+          <td>Context at the start and end of a prompt gets highest attention. Bury critical instructions in the middle and the model may miss them.</td>
+        </tr>
+        <tr>
+          <td>Context Window</td>
+          <td>The model can only see tokens within its context limit (e.g. 200K for Claude 3.5, 1M for Gemini 1.5 Pro).</td>
+          <td>Exceeding the window silently truncates your input. Large codebases, full PDFs, and long chat history all compete for this space.</td>
+        </tr>
+        <tr>
+          <td>Temperature</td>
+          <td>Controls randomness in token selection. Low (0.0–0.2) = deterministic. High (0.8–1.0) = creative.</td>
+          <td>Use low temperature for code, SQL, structured output. Use higher temperature for brainstorming and creative writing.</td>
+        </tr>
+        <tr>
+          <td>System Prompt vs User Prompt</td>
+          <td>System prompts set persistent behaviour rules. User prompts contain the specific task.</td>
+          <td>For enterprise AI apps, your role, rules, and constraints belong in the system prompt — not repeated per request.</td>
+        </tr>
+        <tr>
+          <td>Stop Sequences</td>
+          <td>Tokens that tell the model to stop generating (e.g. "###", "---END---").</td>
+          <td>Use stop sequences in API calls to control output length and prevent runaway generation in structured output flows.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 class="h3">🧠 <span>Advanced Prompting Techniques</span></h3>
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-icon">🔗</div>
+        <div class="card-label">Chain of Thought</div>
+        <div class="card-title">Step-by-Step Reasoning</div>
+        <div class="card-body">Add <em>"Think step by step before answering"</em> for complex logic, debugging, or multi-step analysis. Forces the model to show its reasoning and significantly improves accuracy.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🎯</div>
+        <div class="card-label">Few-Shot Prompting</div>
+        <div class="card-title">Lead by Example</div>
+        <div class="card-body">Provide 2–3 input/output examples inside your prompt before the actual task. The model pattern-matches your examples — ideal for structured output, custom formats, and code style.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔄</div>
+        <div class="card-label">ReAct Pattern</div>
+        <div class="card-title">Reason + Act + Observe</div>
+        <div class="card-body">Used in AI agents: model <em>reasons</em> about the task, selects a <em>tool/action</em>, <em>observes</em> the result, then reasons again. Powers LangGraph, AutoGPT, and production AI agents.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🪜</div>
+        <div class="card-label">Prompt Chaining</div>
+        <div class="card-title">Break into Sub-Tasks</div>
+        <div class="card-body">Instead of one giant prompt, chain outputs: Prompt 1 → analyse requirement → Prompt 2 → generate user stories → Prompt 3 → write test cases. Better quality at each step.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🛡️</div>
+        <div class="card-label">Negative Constraints</div>
+        <div class="card-title">Tell It What NOT to Do</div>
+        <div class="card-body">Explicit exclusions are as powerful as instructions: <em>"No f-strings with user input. No hardcoded secrets. No synchronous calls in async context."</em> LLMs respect clear guardrails.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">📐</div>
+        <div class="card-label">Structured Output</div>
+        <div class="card-title">Force Parseable Responses</div>
+        <div class="card-body">Add <em>"Respond ONLY in valid JSON. No preamble. No markdown."</em> to make AI output machine-readable. Essential for any AI pipeline, automation, or API integration.</div>
+      </div>
+    </div>
+
+    <h3 class="h3">✅ <span>Production-Ready Example Prompt</span></h3>
+    <div class="good-block">
+      <span class="tag tag-good">GOOD — ENTERPRISE GRADE</span>
+      <div class="compare-text">
+        Act as a senior FastAPI developer. Create a secure customer login API using JWT RS256 authentication, PostgreSQL with parameterised queries, bcrypt password verification, Redis session storage, account lockout after 5 failed attempts, and Pydantic request/response models. Output: (1) FastAPI route code with async pattern, (2) Pydantic models, (3) Redis key schema, (4) error response structure. Constraints: no hardcoded secrets, no synchronous DB calls in async endpoints, full Python type hints throughout.
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <!-- TOKEN OPTIMIZATION -->
 <div id="tokenopt" class="section">
   <div class="section-header">
-    <span class="section-num">COST ENGINEERING</span>
+    <span class="section-num">SECTION 10</span>
     <h2 class="section-title">LLM Token Optimization & <em>Cost Control</em></h2>
   </div>
 
@@ -752,7 +927,7 @@
 <!-- PROMPT PATTERNS -->
 <div id="promptpatterns" class="section">
   <div class="section-header">
-    <span class="section-num">PROMPT ENGINEERING</span>
+    <span class="section-num">SECTION 02</span>
     <h2 class="section-title">Reusable <em>Prompt Design Patterns</em></h2>
   </div>
 
@@ -851,7 +1026,7 @@
 <!-- HALLUCINATION CONTROL -->
 <div id="hallucination" class="section">
   <div class="section-header">
-    <span class="section-num">QUALITY CONTROL</span>
+    <span class="section-num">SECTION 09</span>
     <h2 class="section-title">AI Hallucination <em>Prevention</em></h2>
   </div>
 
@@ -957,130 +1132,248 @@
 <!-- STRUCTURED OUTPUT -->
 <div id="structuredoutput" class="section">
   <div class="section-header">
-    <span class="section-num">AUTOMATION READY</span>
-    <h2 class="section-title">JSON & <em>Structured Output Prompting</em></h2>
+    <span class="section-num">SECTION 08</span>
+    <h2 class="section-title">AI Output Formats <em>Across IT Roles</em></h2>
   </div>
 
   <div class="demo-card">
     <div class="demo-header">
-      <div class="demo-badge">API READY</div>
-      <div class="demo-title">Make AI Output Easy to Parse, Validate, and Automate</div>
+      <div class="demo-badge">REFERENCE</div>
+      <div class="demo-title">Every Output Format Used in IT — When to Use Each and How to Ask for It</div>
     </div>
 
     <p style="margin-bottom:20px;color:var(--muted);line-height:1.7;">
-      Structured output is essential when AI responses are used inside APIs, workflows, Jira automation, dashboards, or agents.
+      The format you request determines whether AI output is immediately usable or needs manual cleanup. Specify the format explicitly in every prompt — AI will match it precisely.
     </p>
 
-    <div class="grid-3">
-      <div class="card">
-        <div class="card-icon">🧱</div>
-        <div class="card-label">JSON</div>
-        <div class="card-title">Machine-Readable Output</div>
-        <div class="card-body">Use JSON when AI output will be consumed by backend APIs, UI components, or automation scripts.</div>
-      </div>
-
-      <div class="card">
-        <div class="card-icon">📊</div>
-        <div class="card-label">Tables</div>
-        <div class="card-title">Human Review Format</div>
-        <div class="card-body">Use tables for test cases, risk registers, Jira subtasks, comparisons, and status reports.</div>
-      </div>
-
-      <div class="card">
-        <div class="card-icon">✅</div>
-        <div class="card-label">Validation</div>
-        <div class="card-title">Reduce Output Errors</div>
-        <div class="card-body">Specify required keys, allowed values, null handling, and no extra text outside JSON.</div>
-      </div>
-    </div>
-
-    <h3 class="h3">❌ <span>Unstructured Output</span></h3>
-    <div class="bad-block">
-      <span class="tag tag-bad">BAD</span>
-      <div class="compare-text">
-        Explain the bug and suggest a fix.
-      </div>
-      <div class="compare-reason">
-        Output may be long, inconsistent, hard to parse, and difficult to automate.
-      </div>
-    </div>
-
-    <h3 class="h3">✅ <span>Structured Output Prompt</span></h3>
-    <div class="prompt-block">
-      <span class="prompt-label">JSON OUTPUT PROMPT</span>
-      Analyze the following bug report.
-
-      Return ONLY valid JSON in this exact schema:
-
-      {
-        "summary": "",
-        "severity": "low | medium | high | critical",
-        "root_cause": "",
-        "affected_module": "",
-        "recommended_fix": "",
-        "test_cases": [
-          {
-            "id": "",
-            "scenario": "",
-            "expected_result": ""
-          }
-        ],
-        "production_risk": "",
-        "needs_human_review": true
-      }
-
-      Bug Report:
-      [paste issue here]
-    </div>
-
-    <h3 class="h3">📌 <span>Structured Output Use Cases</span></h3>
+    <h3 class="h3">📋 <span>Complete Output Format Reference by IT Role</span></h3>
     <table class="ai-table">
       <thead>
         <tr>
-          <th>Team</th>
-          <th>Structured Output Example</th>
-          <th>Best Format</th>
+          <th>Format</th>
+          <th>Used By</th>
+          <th>Best For</th>
+          <th>Prompt Instruction to Use</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Developers</td>
-          <td>Bug RCA with severity and corrected code</td>
-          <td>JSON + code block</td>
+          <td><strong>JSON</strong></td>
+          <td>AI Developer, Backend Dev, DevOps</td>
+          <td>API responses, agent tool outputs, config files, structured data pipelines, automation payloads</td>
+          <td><em>"Return ONLY valid JSON. No preamble. No markdown fences."</em></td>
         </tr>
         <tr>
-          <td>QA</td>
-          <td>Test cases with priority and expected result</td>
-          <td>Table</td>
+          <td><strong>Markdown Table</strong></td>
+          <td>BA, QA, PM, Delivery Manager, TA</td>
+          <td>Test cases, RAID logs, story backlogs, comparison matrices, sprint plans, risk registers</td>
+          <td><em>"Format as a markdown table with columns: [col1 | col2 | col3]"</em></td>
         </tr>
         <tr>
-          <td>Project Managers</td>
-          <td>Jira stories, subtasks, risks</td>
-          <td>Markdown table</td>
+          <td><strong>Numbered List</strong></td>
+          <td>All roles</td>
+          <td>Step-by-step runbooks, ordered requirements, installation guides, release checklists, onboarding steps</td>
+          <td><em>"Return as a numbered list. Each item one line. No sub-bullets."</em></td>
         </tr>
         <tr>
-          <td>DevOps</td>
-          <td>Incident RCA and runbook steps</td>
-          <td>JSON / checklist</td>
+          <td><strong>Code Block</strong></td>
+          <td>AI Dev, Frontend Dev, Backend Dev, DevOps, Network Eng</td>
+          <td>Working code, SQL queries, Dockerfile, YAML configs, shell scripts, IaC templates</td>
+          <td><em>"Return only the code inside a single code block. Language: Python. No explanation outside the block."</em></td>
         </tr>
         <tr>
-          <td>HR</td>
-          <td>Candidate screening summary</td>
-          <td>Scoring table</td>
+          <td><strong>YAML</strong></td>
+          <td>DevOps, Technical Architect, AI Developer</td>
+          <td>Docker Compose, Kubernetes manifests, GitHub Actions pipelines, OpenAPI specs, Ansible playbooks</td>
+          <td><em>"Output as valid YAML only. Use 2-space indentation. No comments unless requested."</em></td>
+        </tr>
+        <tr>
+          <td><strong>OpenAPI / Swagger YAML</strong></td>
+          <td>Technical Architect, Backend Dev, BA</td>
+          <td>REST API contracts, endpoint documentation, request/response schemas, integration specs</td>
+          <td><em>"Output a complete OpenAPI 3.1 YAML spec with paths, schemas, and example values."</em></td>
+        </tr>
+        <tr>
+          <td><strong>Gherkin (Given/When/Then)</strong></td>
+          <td>QA, BA, PM</td>
+          <td>Acceptance criteria, BDD test scenarios, UAT scripts, feature file generation</td>
+          <td><em>"Write acceptance criteria in Gherkin format: Given [context], When [action], Then [outcome]."</em></td>
+        </tr>
+        <tr>
+          <td><strong>Mermaid Diagram</strong></td>
+          <td>Technical Architect, BA, AI Developer</td>
+          <td>Flowcharts, sequence diagrams, entity-relationship diagrams, system architecture, state machines</td>
+          <td><em>"Generate a Mermaid flowchart / sequenceDiagram / erDiagram. Output only the Mermaid code block."</em></td>
+        </tr>
+        <tr>
+          <td><strong>PlantUML</strong></td>
+          <td>Technical Architect, BA</td>
+          <td>UML class diagrams, activity diagrams, component diagrams, use case diagrams for formal documentation</td>
+          <td><em>"Generate PlantUML code for a [diagram type] diagram. Output only the @startuml...@enduml block."</em></td>
+        </tr>
+        <tr>
+          <td><strong>SQL</strong></td>
+          <td>AI Developer, Backend Dev, BA, DBA</td>
+          <td>Query generation, schema creation, index recommendations, migration scripts, analytics queries</td>
+          <td><em>"Write a SQL query for PostgreSQL. Use parameterised placeholders. No dynamic SQL. Add inline comments."</em></td>
+        </tr>
+        <tr>
+          <td><strong>Prose / Executive Summary</strong></td>
+          <td>Delivery Manager, PM, CTO, HR</td>
+          <td>RAG status reports, board-level summaries, incident narratives, client emails, PIRs</td>
+          <td><em>"Write in professional prose. Max [N] words. Structure: [intro / body / action items]. No bullet points."</em></td>
+        </tr>
+        <tr>
+          <td><strong>Bullet Summary</strong></td>
+          <td>PM, Delivery Manager, HR, UI/UX</td>
+          <td>Meeting summaries, sprint retrospectives, risk highlights, interview notes, research findings</td>
+          <td><em>"Summarise as bullet points. Max [N] bullets. Each bullet one sentence. Group under headers: [Section 1, Section 2]."</em></td>
+        </tr>
+        <tr>
+          <td><strong>JIRA-Ready Format</strong></td>
+          <td>BA, PM, QA, Delivery Manager</td>
+          <td>Epics, user stories, subtasks, acceptance criteria, story point estimates, sprint assignment</td>
+          <td><em>"Format as JIRA-ready output: Epic | Story | Subtask | Acceptance Criteria | Story Points | Priority | Sprint."</em></td>
+        </tr>
+        <tr>
+          <td><strong>CSV</strong></td>
+          <td>PM, HR, BA, DevOps</td>
+          <td>Bulk data import, test case exports, candidate tracking, SLA logs, sprint metrics for Excel/Sheets</td>
+          <td><em>"Output as CSV. First row is headers. No extra text. Wrap fields with commas in double quotes."</em></td>
+        </tr>
+        <tr>
+          <td><strong>Terraform / HCL</strong></td>
+          <td>DevOps, Technical Architect</td>
+          <td>AWS/GCP/Azure IaC provisioning, reusable modules, state management, environment configs</td>
+          <td><em>"Write Terraform HCL for [resource]. Use variables for all hardcoded values. Add description to every variable."</em></td>
+        </tr>
+        <tr>
+          <td><strong>Dockerfile / docker-compose.yml</strong></td>
+          <td>DevOps, AI Developer, Backend Dev</td>
+          <td>Container build definitions, multi-service local dev, production service orchestration</td>
+          <td><em>"Write a production-ready Dockerfile using multi-stage build. Then write the docker-compose.yml with health checks."</em></td>
+        </tr>
+        <tr>
+          <td><strong>Regex Pattern</strong></td>
+          <td>Backend Dev, QA, DevOps, Network Eng</td>
+          <td>Input validation, log parsing, search-and-replace, firewall rules, URL routing patterns</td>
+          <td><em>"Return only the regex pattern. Include a Python snippet showing how to apply it. Explain each group in one line."</em></td>
+        </tr>
+        <tr>
+          <td><strong>Pydantic / TypeScript Schema</strong></td>
+          <td>AI Developer, Backend Dev, Frontend Dev</td>
+          <td>Request/response models, type-safe data contracts, API validation, frontend interfaces</td>
+          <td><em>"Generate a Pydantic v2 BaseModel / TypeScript interface for [data structure]. Include field descriptions and validators."</em></td>
+        </tr>
+        <tr>
+          <td><strong>Scorecard / Rubric</strong></td>
+          <td>HR, Delivery Manager, PM</td>
+          <td>Interview scorecards, CV screening rubrics, vendor evaluation matrices, code review checklists</td>
+          <td><em>"Format as a scoring rubric: Criterion | Weight | 1 (Does Not Meet) | 2 (Partial) | 3 (Meets) | 4 (Exceeds)."</em></td>
+        </tr>
+        <tr>
+          <td><strong>ADR (Architecture Decision Record)</strong></td>
+          <td>Technical Architect, CTO, AI Developer</td>
+          <td>Documenting technology choices, trade-off analysis, team alignment, audit trail for future decisions</td>
+          <td><em>"Write an ADR. Format: Title | Status | Context | Decision | Options (with pros/cons) | Consequences | Risks."</em></td>
+        </tr>
+        <tr>
+          <td><strong>Changelog / Release Notes</strong></td>
+          <td>DevOps, PM, Backend Dev, Frontend Dev</td>
+          <td>Sprint release notes, API version changelogs, hotfix summaries, customer-facing feature announcements</td>
+          <td><em>"Write release notes in Keep a Changelog format: Added | Changed | Fixed | Deprecated | Security. Audience: [technical/non-technical]."</em></td>
+        </tr>
+        <tr>
+          <td><strong>Wireframe Description / UI Spec</strong></td>
+          <td>UI/UX Designer, Frontend Dev, BA</td>
+          <td>Component state definitions, layout specs, interaction documentation, handoff to developers</td>
+          <td><em>"Write a UI spec for [component]. Cover: layout, all states (default/hover/loading/error/empty), interactions, ARIA attributes, responsive breakpoints."</em></td>
+        </tr>
+        <tr>
+          <td><strong>RFC Document</strong></td>
+          <td>Technical Architect, CTO, AI Developer</td>
+          <td>Proposing architecture changes, API redesigns, process improvements for team review and consensus</td>
+          <td><em>"Write an RFC. Format: Summary | Motivation | Proposed Design | Alternatives | Drawbacks | Unresolved Questions | Implementation Plan."</em></td>
+        </tr>
+        <tr>
+          <td><strong>Post-Incident Report (PIR)</strong></td>
+          <td>DevOps, Delivery Manager, PM</td>
+          <td>Production incident documentation, root cause analysis, corrective actions, stakeholder communication</td>
+          <td><em>"Write a PIR. Format: Executive Summary | Timeline (UTC) | 5-Whys Root Cause | Actions Taken | Corrective Actions with Owner and Deadline | Prevention."</em></td>
+        </tr>
+        <tr>
+          <td><strong>STRIDE Threat Model</strong></td>
+          <td>Technical Architect, AI Developer, DevOps</td>
+          <td>Security architecture reviews, threat identification, risk-ranked mitigations, pen-test prep</td>
+          <td><em>"Generate a STRIDE threat model. For each category: specific threat, Likelihood × Impact, mitigation, component owner. End with top 5 by risk score."</em></td>
         </tr>
       </tbody>
     </table>
 
-    <h3 class="h3">🎬 <span>Live Demo Prompt</span></h3>
+    <h3 class="h3">⚡ <span>Format Selection Quick Guide</span></h3>
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-icon">🤖</div>
+        <div class="card-label">Machine Consumes It</div>
+        <div class="card-title">Use: JSON, YAML, CSV, SQL, Code Block, Regex, Schema</div>
+        <div class="card-body">When the output feeds into an API, pipeline, database, script, or automation — the machine needs clean parseable text. Zero prose outside the format.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">👥</div>
+        <div class="card-label">Human Reviews It</div>
+        <div class="card-title">Use: Markdown Table, Numbered List, Bullet Summary, Gherkin, Scorecard</div>
+        <div class="card-body">When a BA, QA, PM, or developer reads and validates the output — use formats they recognise from their daily tools: Confluence, Notion, JIRA, Excel.</div>
+      </div>
+      <div class="card">
+        <div class="card-icon">📊</div>
+        <div class="card-label">Stakeholder Presents It</div>
+        <div class="card-title">Use: Prose, Executive Summary, ADR, RFC, PIR, Release Notes</div>
+        <div class="card-body">When the output goes to a client, board, or cross-team audience — formal prose with clear sections, specific dates, named owners, and no jargon.</div>
+      </div>
+    </div>
+
+    <h3 class="h3">🎯 <span>Format Instruction Examples — Copy Ready</span></h3>
     <div class="prompt-block">
-      <span class="prompt-label">JIRA STRUCTURED OUTPUT DEMO</span>
-      Convert this requirement into Jira-ready output.
-
-      Return as a markdown table with columns:
-      Type | Title | Description | Acceptance Criteria | Story Points | Priority
-
-      Requirement:
-      Build a customer analytics dashboard with login, KPI cards, sales charts, filters, Excel export, and mobile responsive UI.
+      <span class="prompt-label">JSON — API OUTPUT</span>
+      <button class="copy-btn" onclick="copyStaticText('fmt1')">Copy</button>
+      <div id="fmt1">Return ONLY valid JSON matching this exact schema. No preamble. No explanation. No markdown fences.
+{
+  "status": "success | error",
+  "data": {},
+  "errors": [],
+  "metadata": { "source": "", "confidence": 0.0 }
+}</div>
+    </div>
+    <div class="prompt-block">
+      <span class="prompt-label">MARKDOWN TABLE — QA / BA</span>
+      <button class="copy-btn" onclick="copyStaticText('fmt2')">Copy</button>
+      <div id="fmt2">Return output as a markdown table only.
+Columns: ID | Category | Test Scenario | Precondition | Steps | Expected Result | Priority
+Start from ID TC-001. Priority values: P1 / P2 / P3. No rows outside this table.</div>
+    </div>
+    <div class="prompt-block">
+      <span class="prompt-label">JIRA FORMAT — BA / PM</span>
+      <button class="copy-btn" onclick="copyStaticText('fmt3')">Copy</button>
+      <div id="fmt3">Format output as JIRA-ready tasks. Structure:
+EPIC: [title] — [business objective]
+  STORY [n]: As a [role], I want [action], so that [benefit].
+    Acceptance Criteria (Gherkin):
+      Given [context]
+      When [action]
+      Then [outcome]
+    Story Points: [n] | Priority: High/Medium/Low | Sprint: Sprint [n]
+    SUBTASK: [technical task] — Owner: [role] | Est: [n] hours</div>
+    </div>
+    <div class="prompt-block">
+      <span class="prompt-label">EXECUTIVE PROSE — DELIVERY MANAGER / CTO</span>
+      <button class="copy-btn" onclick="copyStaticText('fmt4')">Copy</button>
+      <div id="fmt4">Write in professional executive prose. Structure:
+1. Overall Status: [RAG: Red / Amber / Green] — one sentence justification
+2. Executive Summary: 3 sentences maximum. No jargon.
+3. Key Achievements: bulleted, specific, with dates
+4. Risks and Issues: each with owner, mitigation, and resolution date
+5. Next Period Plan: what delivers by when
+Max 300 words total. Audience: non-technical senior leadership.</div>
     </div>
   </div>
 </div>
@@ -1089,60 +1382,131 @@
 <!-- BAD VS GOOD -->
 <div id="compare" class="section">
   <div class="section-header">
-    <span class="section-num">SECTION 04</span>
+    <span class="section-num">SECTION 11</span>
     <h2 class="section-title">Bad Prompt <em>vs Good Prompt</em></h2>
   </div>
-  <div id="compareContent"></div>
+  <div id="compareContent">
+<h3 class="h3">Example 1 — <span>Developer: Code Fix Request</span></h3>
+<div class="compare-row">
+  <div class="bad-block">
+    <span class="tag tag-bad">❌ BAD PROMPT</span>
+    <div class="compare-text">Hi, I have a bug in my FastAPI endpoint. It's been working fine for a while but now it sometimes returns a 500 error. I'm not sure what's causing it. I've tried restarting the server and checking the logs but couldn't find anything obvious. Can you help me fix it? Let me know if you need more information. I'm using Python and PostgreSQL. The error seems to happen more when there are multiple users. Thanks.</div>
+    <div class="compare-reason">Vague symptom ("sometimes 500"), no code, no stack trace, no repro steps, no versions — AI can only guess generically.</div>
+  </div>
+  <div class="good-block">
+    <span class="tag tag-good">✅ GOOD PROMPT</span>
+    <div class="compare-text">Act as a senior backend engineer. My FastAPI async endpoint POST /api/chat raises a 500 error under concurrent load (5+ users). Stack: Python 3.11, FastAPI 0.110, asyncpg, PostgreSQL 15. Error: "asyncpg.exceptions.TooManyConnectionsError: sorry, too many clients." The endpoint opens a new DB connection per request with no connection pooling. Review this code for the connection handling bug, explain the root cause, and provide the fix using asyncpg connection pool with lifespan context manager. Also identify any other async anti-patterns in the same code.</div>
+    <div class="compare-reason">Role + exact error message + stack versions + reproduction condition + code pattern + specific fix requested = surgical answer in one response.</div>
+  </div>
 </div>
 
-<!-- WORKFLOW -->
-<div id="workflow" class="section">
-  <div class="section-header">
-    <span class="section-num">SECTION 05 + 08</span>
-    <h2 class="section-title">AI Workflow + <em>Automation Ideas</em></h2>
+<h3 class="h3">Example 2 — <span>BA: Requirements Documentation</span></h3>
+<div class="compare-row">
+  <div class="bad-block">
+    <span class="tag tag-bad">❌ BAD PROMPT</span>
+    <div class="compare-text">We had a meeting with the client today and they mentioned they want some improvements to the system. They talked about adding a dashboard and making things faster. There were also some concerns about reports not being accurate. Can you help me write up the requirements from this? The client is a retail company and the project is about 6 months. I want to make it professional and clear for the developers. Please write it in a proper format.</div>
+    <div class="compare-reason">No meeting notes, no actual requirements, no stakeholders named, no feature scope — AI invents plausible-sounding but fabricated requirements.</div>
   </div>
-  <div id="workflowContent"></div>
+  <div class="good-block">
+    <span class="tag tag-good">✅ GOOD PROMPT</span>
+    <div class="compare-text">Act as a senior Business Analyst. Convert these raw stakeholder meeting notes into a formal BRD section for a retail CRM dashboard module. Client: UAE jewelry retailer, 14 stores. Stakeholders: IT Director (technical), Store Operations Head (non-technical). Raw notes: "need real-time KPI dashboard per store, current Excel reports are 2 days delayed, managers want footfall, revenue, conversion rate on one screen, export to PDF for board meetings, Arabic language support needed, mobile must work on iPhone." Format: Business Objective, Current State Problem, Proposed Solution (numbered functional requirements), Business Rules, Assumptions, Constraints. Flag any ambiguities as open questions.</div>
+    <div class="compare-reason">Role + raw notes provided + stakeholder context + output format + ambiguity instruction = a BRD section ready for sign-off review.</div>
+  </div>
+</div>
+
+<h3 class="h3">Example 3 — <span>QA: Test Case Generation</span></h3>
+<div class="compare-row">
+  <div class="bad-block">
+    <span class="tag tag-bad">❌ BAD PROMPT</span>
+    <div class="compare-text">I need test cases for the login feature. We want to make sure it works properly and handles errors. The login has a username and password. Write test cases covering different scenarios. We're using a standard web application. Please make it comprehensive and include edge cases. The format should be something the QA team can use. Let me know if you need anything else about the system.</div>
+    <div class="compare-reason">No auth mechanism, no business rules (lockout policy, session timeout), no tech stack — produces 5 generic happy-path tests that miss real failure modes.</div>
+  </div>
+  <div class="good-block">
+    <span class="tag tag-good">✅ GOOD PROMPT</span>
+    <div class="compare-text">Act as a senior QA engineer. Write a complete test suite for a corporate login module. Auth: Azure AD SSO + local username/password fallback. Rules: MFA required for admin roles, account locks after 5 failed attempts for 15 minutes, JWT session expires after 30 minutes idle, password complexity: 12 chars min with uppercase, number, special char. Generate test cases in this table format — ID | Category | Test Scenario | Precondition | Steps | Expected Result | Priority — covering: positive flows (SSO success, local login success), negative flows (wrong password, locked account, expired session, MFA failure), edge cases (special chars in password, concurrent sessions, token refresh), and security scenarios (SQL injection in username field, brute force detection).</div>
+    <div class="compare-reason">Auth type + all business rules + exact table format + 4 coverage categories = a test suite a developer implements and a manager signs off on.</div>
+  </div>
+</div>
+  </div>
 </div>
 
 <!-- TOOLS -->
 <div id="tools" class="section">
   <div class="section-header">
-    <span class="section-num">SECTION 07</span>
+    <span class="section-num">SECTION 12</span>
     <h2 class="section-title">Best <em>AI Tools</em> for Your Role</h2>
   </div>
-  <div id="toolsContent"></div>
+  <div id="toolsContent">
+<div class="grid-3">
+  <div class="tool-card"><div class="tool-name">ChatGPT</div><div class="tool-desc">Prompt testing, coding help, documentation, analysis, and structured output.</div><div class="tool-tag"><span class="pill pill-blue">Chat</span></div></div>
+  <div class="tool-card"><div class="tool-name">Claude</div><div class="tool-desc">Long document analysis, code review, reasoning, and enterprise writing.</div><div class="tool-tag"><span class="pill pill-blue">Reasoning</span></div></div>
+  <div class="tool-card"><div class="tool-name">GitHub Copilot</div><div class="tool-desc">Inline code completion, test generation, and developer productivity.</div><div class="tool-tag"><span class="pill pill-blue">IDE</span></div></div>
+  <div class="tool-card"><div class="tool-name">Cursor IDE</div><div class="tool-desc">AI-native codebase analysis, refactoring, and multi-file editing.</div><div class="tool-tag"><span class="pill pill-blue">Codebase</span></div></div>
+  <div class="tool-card"><div class="tool-name">Gemini</div><div class="tool-desc">Large context analysis, multimodal workflows, and cost-sensitive tasks.</div><div class="tool-tag"><span class="pill pill-blue">Large Context</span></div></div>
+  <div class="tool-card"><div class="tool-name">Langfuse</div><div class="tool-desc">LLM observability, tracing, cost monitoring, and quality evaluation.</div><div class="tool-tag"><span class="pill pill-blue">Observability</span></div></div>
+</div>
+</div>
 </div>
 
 <!-- RISKS -->
 <div id="risks" class="section">
   <div class="section-header">
-    <span class="section-num">SECTION 06</span>
+    <span class="section-num">SECTION 13</span>
     <h2 class="section-title">AI Risks & <em>Safety</em> — What Every Employee Must Know</h2>
   </div>
-  <div id="risksContent"></div>
+  <div id="risksContent">
+<div class="risk-card"><div class="risk-title">⚠️ Hallucination Risk</div><div class="risk-body">AI may confidently generate incorrect code, fake APIs, wrong SQL columns, or unsupported claims. Always verify.</div></div>
+<div class="risk-card"><div class="risk-title">🔒 Confidentiality Risk</div><div class="risk-body">Do not paste client data, API keys, production credentials, private code, or sensitive documents into public AI tools.</div></div>
+<div class="risk-card"><div class="risk-title">🧪 Validation Required</div><div class="risk-body">Treat AI output as a draft. Test code, validate SQL, review security, and confirm business logic before use.</div></div>
+</div>
 </div>
 
 <!-- CHEAT SHEET -->
 <div id="cheatsheet" class="section">
   <div class="section-header">
-    <span class="section-num">SECTION 09</span>
+    <span class="section-num">SECTION 14</span>
     <h2 class="section-title">Quick Prompt <em>Cheat Sheet</em></h2>
   </div>
-  <div id="cheatContent"></div>
+  <div id="cheatContent">
+<div style="background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 24px;">
+  <div class="cheat-item"><div class="cheat-num">01</div><div class="cheat-text">Act as a [role]. Analyze [task] and return output as [format].</div></div>
+  <div class="cheat-item"><div class="cheat-num">02</div><div class="cheat-text">Convert this requirement into Jira stories with acceptance criteria and story points.</div></div>
+  <div class="cheat-item"><div class="cheat-num">03</div><div class="cheat-text">Review this code for bugs, security issues, performance issues, and best practices.</div></div>
+  <div class="cheat-item"><div class="cheat-num">04</div><div class="cheat-text">Generate test cases covering positive, negative, edge, and security scenarios.</div></div>
+  <div class="cheat-item"><div class="cheat-num">05</div><div class="cheat-text">Summarize this meeting into decisions, action items, owners, and deadlines.</div></div>
+</div>
+</div>
 </div>
 
 <!-- CLOSING -->
 <div id="closing" class="section">
   <div class="section-header">
-    <span class="section-num">SECTION 10</span>
+    <span class="section-num">SECTION 15</span>
     <h2 class="section-title">Corporate <em>Closing Message</em></h2>
   </div>
-  <div id="closingContent"></div>
+  <div id="closingContent">
+<div class="closing">
+  <div class="closing-title">AI is a <span class="highlight">Productivity Multiplier</span></div>
+  <div class="closing-body">
+    Prompt engineering helps teams ask better questions, get better outputs, reduce cost, and use AI safely in enterprise workflows.
+  </div>
+</div>
+</div>
 </div>
 
 </div>
 
 <script>
+
+function copyStaticText(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const text = el.innerText || el.textContent;
+  navigator.clipboard.writeText(text.trim());
+  alert('Prompt copied!');
+}
+
+
 const DATA = {
     "AI Developer": {
     usecases: [
@@ -1582,7 +1946,8 @@ const DATA = {
       { label: "UAT Plan", text: "Create a UAT plan for [module/feature]. Include: scope, entry/exit criteria, test scenarios (business language), test data requirements, sign-off process, and a defect classification guide." },
       { label: "Data Dictionary", text: "Create a data dictionary for the [module] with fields: Field Name | Data Type | Length | Mandatory | Description | Business Rules | Example Value. Cover these fields: [LIST FIELDS]." },
       { label: "Change Impact", text: "Analyze the impact of this change:\n[DESCRIBE CHANGE]\n\nAssess impact on: business processes, users, data, integrations, and training needs. Rate impact: High/Medium/Low with justification." },
-      { label: "FSD Writing", text: "Write a Functional Specification for [feature]. Include: Overview, User Roles, Functional Requirements (numbered), UI/UX Behavior, Validation Rules, Error Messages, and API Integration Points." }
+      { label: "FSD Writing", text: "Write a Functional Specification for [feature]. Include: Overview, User Roles, Functional Requirements (numbered), UI/UX Behavior, Validation Rules, Error Messages, and API Integration Points." },
+      { label: "Agile JIRA Task Generator", text: "Act as a senior Agile delivery manager and technical architect.\n\nConvert the following software requirement into complete JIRA-ready Agile tasks.\n\nRequirement:\n[DESCRIBE YOUR REQUIREMENT HERE]\n\nFeatures:\n[LIST THE KEY FEATURES]\n\nGenerate:\n1. Epic — with business objective and acceptance criteria\n2. User stories — As a [role], I want [action], so that [benefit]\n3. Subtasks — technical breakdown per user story\n4. Acceptance criteria — Gherkin Given/When/Then for each story\n5. Story points — estimation with rationale\n6. Technical risks — per feature with mitigation\n7. QA test scenarios — positive, negative, and edge cases\n8. Sprint recommendations — which stories go in Sprint 1 vs Sprint 2\n\nFormat output professionally for enterprise JIRA usage. Include Definition of Done." }
     ],
     demos: [
       { title: "User Story Generator", badge: "⏱ 8 min", steps: ["State a raw client requirement verbally", "AI generates structured user story + acceptance criteria", "Show how this replaces an hour of documentation work"] },
@@ -2077,50 +2442,46 @@ function generateSession() {
     ucHtml += `<div class="card"><div class="card-icon">${u.icon}</div><div class="card-label">${u.label}</div><div class="card-title">${u.title}</div><div class="card-body">${u.body}</div></div>`;
   });
   ucHtml += '</div>';
-  document.getElementById('usecasesContent').innerHTML = ucHtml;
+  if (document.getElementById('usecasesContent')) document.getElementById('usecasesContent').innerHTML = ucHtml;
 
   // Prompts
   let pHtml = '';
   d.prompts.forEach((p, i) => {
     pHtml += `<div class="prompt-block"><span class="prompt-label">Prompt ${i+1} — ${p.label}</span><button class="copy-btn" onclick="copyPrompt(this)">Copy</button>${p.text.replace(/\n/g, '<br>')}</div>`;
   });
-  document.getElementById('promptsContent').innerHTML = pHtml;
+  if (document.getElementById('promptsContent')) document.getElementById('promptsContent').innerHTML = pHtml;
 
-  // Demos
-  let dHtml = '';
-  d.demos.forEach(demo => {
-    dHtml += `<div class="demo-card"><div class="demo-header"><span class="demo-badge">${demo.badge}</span><span class="demo-title">${demo.title}</span></div><ul class="demo-steps">`;
-    demo.steps.forEach(s => { dHtml += `<li>${s}</li>`; });
-    dHtml += `</ul></div>`;
-  });
-  document.getElementById('demosContent').innerHTML = dHtml;
+  // Populate dynamic first prompt in Demos section
+  if (d.prompts && d.prompts.length > 0) {
+    const firstPrompt = d.prompts[0];
+    const promptEl = document.getElementById('demoFirstPromptDynamic');
+    const labelEl = document.getElementById('demoPromptLabel');
+    if (promptEl) promptEl.innerHTML = firstPrompt.text.replace(/\n/g, '<br>');
+    if (promptEl) promptEl.style.color = '';
+    if (promptEl) promptEl.style.fontStyle = '';
+    if (labelEl) labelEl.textContent = `PROMPT 1 — ${firstPrompt.label.toUpperCase()}`;
+
+    // Populate Live Demo section too
+    const liveTitleEl = document.getElementById('liveDemoTitle');
+    const livePromptEl = document.getElementById('liveDemoPromptText');
+    if (liveTitleEl) liveTitleEl.textContent = `Live Demo — ${firstPrompt.label} (${role})`;
+    if (livePromptEl) {
+      livePromptEl.innerHTML = firstPrompt.text.replace(/\n/g, '<br>');
+      livePromptEl.style.color = '';
+      livePromptEl.style.fontStyle = '';
+    }
+  }
 
   // Compare
   let cHtml = '';
   d.compare.forEach((c, i) => {
     cHtml += `<h3 class="h3">Example ${i+1}</h3><div class="compare-row">
-      <div class="bad-block"><span class="tag tag-bad">❌ BAD PROMPT</span><div class="compare-text">${c.bad}</div><div class="compare-reason">Why it fails: ${c.badReason}</div></div>
-      <div class="good-block"><span class="tag tag-good">✅ GOOD PROMPT</span><div class="compare-text">${c.good}</div><div class="compare-reason">Why it works: ${c.goodReason}</div></div>
+      <div class="bad-block"><span class="tag tag-bad">❌ BAD PROMPT</span><div class="compare-text" style="white-space:pre-wrap;">${c.bad}</div><div class="compare-reason">Why it fails: ${c.badReason}</div></div>
+      <div class="good-block"><span class="tag tag-good">✅ GOOD PROMPT</span><div class="compare-text" style="white-space:pre-wrap;">${c.good}</div><div class="compare-reason">Why it works: ${c.goodReason}</div></div>
     </div>`;
   });
-  document.getElementById('compareContent').innerHTML = cHtml;
-
-  // Workflow
-  let wHtml = '<h3 class="h3">📌 <span>AI-Augmented Workflow</span></h3>';
-  d.workflows.forEach((w, i) => {
-    wHtml += `<div style="margin-bottom: 20px;"><div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--muted); margin-bottom: 8px;">Workflow ${i+1}</div><div class="workflow">
-      <div class="wf-step"><div class="wf-label">Task</div><div class="wf-title">${w.task}</div></div>
-      <div class="wf-step"><div class="wf-label">AI Usage</div><div class="wf-title">${w.ai}</div></div>
-      <div class="wf-step"><div class="wf-label">AI Output</div><div class="wf-title">${w.output}</div></div>
-      <div class="wf-step"><div class="wf-label">Human Step</div><div class="wf-title">${w.verify}</div></div>
-    </div></div>`;
-  });
-  wHtml += `<hr class="divider"><h3 class="h3">⚡ <span>Automation Ideas</span> — Reduce Repetitive Work</h3><div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px;">`;
-  d.automation.forEach(a => {
-    wHtml += `<div class="card"><div style="font-size: 0.85rem;">🔄 ${a}</div></div>`;
-  });
-  wHtml += '</div>';
-  document.getElementById('workflowContent').innerHTML = wHtml;
+  if (document.getElementById('compareContent')) document.getElementById('compareContent').innerHTML = cHtml;
+  // Workflow tab removed intentionally.
 
   // Tools
   let tHtml = '<div class="grid-3">';
@@ -2128,7 +2489,7 @@ function generateSession() {
     tHtml += `<div class="tool-card"><div class="tool-name">${t.name}</div><div class="tool-desc">${t.desc}</div><div class="tool-tag"><span class="pill pill-blue">${t.tag}</span></div></div>`;
   });
   tHtml += '</div>';
-  document.getElementById('toolsContent').innerHTML = tHtml;
+  if (document.getElementById('toolsContent')) document.getElementById('toolsContent').innerHTML = tHtml;
 
   // Risks
   const risks = [
@@ -2143,7 +2504,7 @@ function generateSession() {
   risks.forEach(r => {
     rHtml += `<div class="risk-card"><div class="risk-title">${r.title}</div><div class="risk-body">${r.body}</div></div>`;
   });
-  document.getElementById('risksContent').innerHTML = rHtml;
+  if (document.getElementById('risksContent')) document.getElementById('risksContent').innerHTML = rHtml;
 
   // Cheat Sheet
   let chHtml = '<div style="background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 24px;">';
@@ -2152,7 +2513,7 @@ function generateSession() {
     chHtml += `<div class="cheat-item"><span class="cheat-num">${String(i+1).padStart(2,'0')}</span><span class="cheat-text">${c}</span></div>`;
   });
   chHtml += '</div>';
-  document.getElementById('cheatContent').innerHTML = chHtml;
+  if (document.getElementById('cheatContent')) document.getElementById('cheatContent').innerHTML = chHtml;
 
   // Closing
   document.getElementById('closingContent').innerHTML = `
@@ -2174,13 +2535,25 @@ function generateSession() {
 }
 
 function showSection(id) {
-  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-  const tabs = document.querySelectorAll('.nav-tab');
-  const map = ['home','usecases','prompts','demos','compare','workflow','tools','risks','cheatsheet','closing'];
-  const idx = map.indexOf(id);
-  if (idx >= 0) tabs[idx].classList.add('active');
+  document.querySelectorAll('.section').forEach(section => {
+    section.classList.remove('active');
+  });
+
+  const target = document.getElementById(id);
+  if (target) {
+    target.classList.add('active');
+  }
+
+  document.querySelectorAll('.nav-tab').forEach(tab => {
+    tab.classList.remove('active');
+  });
+
+  const clickedTab = Array.from(document.querySelectorAll('.nav-tab'))
+    .find(tab => tab.getAttribute('onclick') && tab.getAttribute('onclick').includes("'" + id + "'"));
+
+  if (clickedTab) {
+    clickedTab.classList.add('active');
+  }
 }
 
 function copyPrompt(btn) {
@@ -2192,44 +2565,37 @@ function copyPrompt(btn) {
   });
 }
 
-const jiraPrompt = `Act as a senior Agile delivery manager and technical architect.
+function copyLiveDemoPrompt(btn) {
+  const text = document.getElementById('liveDemoPromptText')?.innerText || '';
+  navigator.clipboard.writeText(text).then(() => {
+    btn.textContent = 'Copied!';
+    setTimeout(() => btn.textContent = 'Copy', 2000);
+  });
+}
 
-Convert the following software requirement into complete JIRA-ready Agile tasks.
+function getLivePromptText() {
+  return document.getElementById('liveDemoPromptText')?.innerText || '';
+}
 
-Requirement:
-Build a customer analytics dashboard for retail store managers.
-
-Features:
-- Login authentication
-- KPI cards
-- Sales charts
-- Store filters
-- Export to Excel
-- Mobile responsive UI
-
-Generate:
-1. Epic
-2. User stories
-3. Subtasks
-4. Acceptance criteria
-5. Story points
-6. Technical risks
-7. QA test scenarios
-8. Sprint recommendations
-
-Format output professionally for enterprise JIRA usage.`;
-
-function openChatGPTPrompt() {
-  navigator.clipboard.writeText(jiraPrompt);
+function openChatGPTLivePrompt() {
+  const text = getLivePromptText();
+  if (!text || text.includes('Generate a session')) { alert('Please generate a session from the Home tab first!'); return; }
+  navigator.clipboard.writeText(text);
   window.open('https://chatgpt.com', '_blank');
   alert('Prompt copied! Paste into ChatGPT.');
 }
 
-function openClaudePrompt() {
-  navigator.clipboard.writeText(jiraPrompt);
+function openClaudeLivePrompt() {
+  const text = getLivePromptText();
+  if (!text || text.includes('Generate a session')) { alert('Please generate a session from the Home tab first!'); return; }
+  navigator.clipboard.writeText(text);
   window.open('https://claude.ai', '_blank');
   alert('Prompt copied! Paste into Claude.');
 }
+
+// Legacy stubs kept for backward compatibility
+function openChatGPTPrompt() { openChatGPTLivePrompt(); }
+function openClaudePrompt() { openClaudeLivePrompt(); }
 
 </script>
 </body>
